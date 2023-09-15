@@ -8,5 +8,6 @@ spec:
       containers:
         - name: api
           image: 211104/api:v-445ba9e3
-          command: ["./migrate.sh"]
+          command: ['php', 'artisan', 'migrate']
       restartPolicy: OnFailure
+  backoffLimit: 5
