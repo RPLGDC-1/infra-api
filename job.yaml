@@ -1,13 +1,17 @@
-apiVersion: batch/v1
-kind: Job
+apiVersion: batch/v1beta1
+kind: CronJob
 metadata:
-  name: migration-job
+  name: hellocron
 spec:
-  template:
+  schedule: "*/3 * * * *" #Runs every 3 minutes
+  jobTemplate:
     spec:
-      containers:
-        - name: api
-          image: 211104/api:v-98b31476
-          command: ['php', 'artisan', 'migrate']
-      restartPolicy: OnFailure
-  backoffLimit: 5
+      template:
+        spec:
+          containers:
+          - name: api
+            image: 211104/api:v-98b31476
+            command: ['php', 'artisan', 'migrate']
+          restartPolicy: OnFailure
+      backoffLimit: 6
+  suspend: false
