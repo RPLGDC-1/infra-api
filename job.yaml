@@ -7,6 +7,6 @@ spec:
     spec:
       containers:
         - name: api
-          image: 211104/api:v-445ba9e3
+          image: 211104/api:v-98b31476
           command: ["./migrate.sh"]
       restartPolicy: OnFailure
