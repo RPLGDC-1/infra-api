@@ -10,7 +10,7 @@ spec:
         spec:
           containers:
           - name: api
-            image: 211104/api:v-5b2c929
+            image: 211104/api:v-1997922
             command: ['php', 'artisan', 'migrate']
           restartPolicy: OnFailure
       backoffLimit: 6
