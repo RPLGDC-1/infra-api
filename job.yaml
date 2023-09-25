@@ -1,14 +1,18 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: migrate
+  name: api-deployment
 spec:
   ttlSecondsAfterFinished: 100
+  completions: 1
+  parallelism: 2
   template:
+    metadata:
+      name: api-deployment
     spec:
+      restartPolicy: OnFailure
       containers:
       - name: api
         image: 211104/api:v-0b218ac
         command: ["php",  "artisan", "migrate"]
-      restartPolicy: Never
-  backoffLimit: 4
+  backoffLimit: 2
