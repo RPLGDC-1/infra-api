@@ -3,7 +3,6 @@ kind: Job
 metadata:
   name: api-deployment
 spec:
-  ttlSecondsAfterFinished: 100
   completions: 1
   parallelism: 2
   template:
