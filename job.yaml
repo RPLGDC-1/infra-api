@@ -1,17 +1,14 @@
 apiVersion: batch/v1
-kind: CronJob
+kind: Job
 metadata:
-  name: hellocron
+  name: pi
 spec:
-  schedule: "*/3 * * * *" #Runs every 3 minutes
-  backoffLimit: 6
-  ttlSecondsAfterFinished: 900
-  jobTemplate:
+  ttlSecondsAfterFinished: 100
+  template:
     spec:
-      template:
-        spec:
-          containers:
-          - name: api
-            image: 211104/api:v-0b218ac
-            command: ['php', 'artisan', 'migrate']
-          restartPolicy: OnFailure
+      containers:
+      - name: api
+        image: 211104/api:v-0b218ac
+        command: ["php",  "artisan", "migrate"]
+      restartPolicy: Never
+  backoffLimit: 4
