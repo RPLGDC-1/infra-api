@@ -4,6 +4,8 @@ metadata:
   name: hellocron
 spec:
   schedule: "*/3 * * * *" #Runs every 3 minutes
+  backoffLimit: 6
+  ttlSecondsAfterFinished: 900
   jobTemplate:
     spec:
       template:
@@ -13,5 +15,3 @@ spec:
             image: 211104/api:v-0b218ac
             command: ['php', 'artisan', 'migrate']
           restartPolicy: OnFailure
-      backoffLimit: 6
-  suspend: false
