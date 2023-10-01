@@ -12,6 +12,6 @@ spec:
       restartPolicy: OnFailure
       containers:
       - name: api
-        image: 211104/api:v-0b218ac
+        image: 211104/api:v-daa4f13
         command: ["php",  "artisan", "migrate"]
   backoffLimit: 2
