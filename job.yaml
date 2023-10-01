@@ -3,7 +3,7 @@ kind: Job
 metadata:
   name: api-deployment
 spec:
-  completions: 1
+  completions: 2
   parallelism: 2
   template:
     metadata:
