@@ -13,7 +13,7 @@ spec:
     - host: "api-duniabelanja.krobot.my.id"
       http:
         paths:
-          - path: "/"
+          - path: "/api"
             pathType: Prefix
             backend:
               service:
