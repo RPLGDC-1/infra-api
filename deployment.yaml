@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: 211104/api:v-8f56173
+          image: 211104/api:v-69d89c8
           imagePullPolicy: Always
           ports:
             - containerPort: 9000
