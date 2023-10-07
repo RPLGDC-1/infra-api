@@ -10,7 +10,8 @@ data:
     APP_DEBUG=true
     APP_URL=https://admin-duniabelanja.krobot.my.id
     WEB_URL=https://duniabelanja.krobot.my.id
-    
+    ASSET_URL=https://admin-duniabelanja.krobot.my/
+
     LOG_CHANNEL=stack
     LOG_DEPRECATIONS_CHANNEL=null
     LOG_LEVEL=debug
