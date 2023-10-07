@@ -8,7 +8,7 @@ data:
     APP_ENV=local
     APP_KEY=base64:1itA+7ics9KziMGIKfJbiiqlaOX6sKO16PC5bQ6LTPA=
     APP_DEBUG=true
-    APP_URL=https://api-duniabelanja.krobot.my.id
+    APP_URL=https://admin-duniabelanja.krobot.my.id
     WEB_URL=https://duniabelanja.krobot.my.id
     
     LOG_CHANNEL=stack
